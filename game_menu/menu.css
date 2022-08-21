@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    /* font-family: 'Press Start 2p'; */
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.main {
+    /* background-color: aqua; */
+    /* background-image: url(/bg2.jpg); */
+    /* background: url(./final-1.mp4); */
+    background-size: cover;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.head {
+    /* height: 10vh;
+    width: 100vw; */
+    text-align: center;
+    font-family: 'Cinzel', serif;
+}
+
+.left {
+    margin-top: 25vh;
+    height: 50vh;
+    width: 50vw;
+    font-size: x-large;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.options {
+    background-color: rgb(166, 222, 234);
+    height: 8vh;
+    width: 15vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: 0.2s;
+    font-family: 'Cinzel', serif;
+    transition: all 0.3s;
+    z-index: 9999;
+    /* opacity: 90%; */
+    opacity: 100%;
+    
+}
+
+
+
+.right {
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.playbtn {
+    height: 8vh;
+    width: 15vw;
+    opacity: 100%;
+    /* cursor: pointer; */
+    font-size: 25px;
+    font-weight: 600;
+    z-index: 999;
+    /* font-family: 'Satisfy'; */
+}
+/* .options:hover {
+    background-color: rgb(0, 160, 241);
+    opacity: 100%;
+} */
+
+
+.image{
+    position: absolute;
+    top: -10px;
+    right: 10%;
+    transform: scale(0.7);
+    z-index: 0;
+}
+
+
+/* Button css */
+.video-game-button {
+	text-shadow: 1px 1px pink, -1px -1px maroon;
+
+	line-height: 1.5em;
+	text-align: center;
+	display: inline-block;
+	width: 1.5em;
+	-webkit-border-radius: .75em;
+	-moz-border-radius: .75em;
+	-o-border-radius: .75em;
+		border-radius: .75em;
+	background-color: red;
+	-webkit-box-shadow:  0 .2em maroon;
+	-moz-box-shadow:  0 .2em maroon;
+	-o-box-shadow:  0 .2em maroon;
+	box-shadow:  0 .2em maroon;
+	color: red;
+	margin: 5px;
+	background-color: red;
+	background-image: -o-linear-gradient(left top, pink 3%, red 22%, maroon 99%);
+	background-image: -moz-linear-gradient(left top, pink 3%, red 22%, maroon 99%);
+	background-image: -webkit-linear-gradient(left top, pink 3%, red 22%, maroon 99%);
+	background-image: linear-gradient(left top, pink 3%, red 22%, maroon 99%);
+	cursor: pointer;
+  padding-left: 5px;
+}
+.start-btn{
+    text-align: center;
+	/* display: inline-block; */
+	margin:5px;
+    font-weight: bold;
+    /* padding: 10px 0 0px 10px ; */
+    background-color: lightgray;
+    text-shadow: -1px -1px black, 1px 1px white;
+    color: gray;
+    -webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	-o-border-radius: 7px;
+	border-radius: 7px;
+    box-shadow: 0 .2em gray; 
+    cursor: pointer;
+
+}
+.video-game-button:active, .start-btn:active {
+	box-shadow: none;
+	position: relative;
+	top: .2em;
+}

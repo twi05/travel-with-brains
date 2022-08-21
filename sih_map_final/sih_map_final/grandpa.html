@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  img{
+    height: 200px;
+    width: 200px;
+    position: relative;
+    left: 470px;
+    top: 430px;
+    cursor: pointer;
+  }
+   #container 
+{
+  height: 400px;
+  position: relative;
+  width: 400px;
+}
+#controls
+{
+  bottom: -140px;
+  left: 560px;
+  position: absolute;
+  width: 40%;
+  border-radius: 10%;
+  height: 30px;
+  border: none;
+  color: black;
+  font-weight: bolder;
+
+  cursor: pointer;
+}
+  body{
+    overflow: hidden;
+    margin: 0;
+  }
+</style>
+<body>
+  <div id="container">
+    <canvas id="canvas"style="z-index: -1; position: absolute;">
+     
+    </canvas>
+    <img src="button.png" alt="" id="img">
+    <!-- <button id="controls" onclick="next()" >
+      Hello
+    </button> -->
+  </div>
+  <script>
+    var img=document.getElementById("img");
+    img.addEventListener('click',next);
+    function next(){
+      window.location.replace("station.html");
+    }
+  const canvas=document.getElementById("canvas");
+  const ctx=canvas.getContext('2d');
+  canvas.width=window.innerWidth;
+  canvas.height=window.innerHeight;
+  var img=new Image();
+  img.src="gpa.png";
+  ctx.fillStyle = "#ff0000";
+  ctx.font = "27pt impact";
+
+  img.onload=()=>{
+    ctx.drawImage(img,0,0,canvas.width,canvas.height);
+    ctx.fillText("Hello Grandpa ", 274, 125);
+    ctx.fillText("Welcome to Nagpur ", 240, 165);
+
+  }
+  </script>
+</body>
+</html>

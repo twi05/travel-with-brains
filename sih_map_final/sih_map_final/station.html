@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  #container
+{
+  height: 400px;
+  position: relative;
+  width: 400px;
+}
+img{
+  height: 200px;
+  width: 200px;
+  position: relative;  
+  left: 480px;
+  top: 400px;
+  cursor: pointer;
+}
+#controls
+{
+  bottom: -140px;
+  left: 560px;
+  position: absolute;
+  width: 40%;
+  border-radius: 10%;
+  height: 30px;
+  border: none;
+  color: black;
+  font-weight: bolder;
+  background-color: yellow;
+  cursor: pointer;
+}
+body{
+   border: 0;
+   margin: 0;
+   overflow: hidden;
+}
+html{
+  border: 0;
+  margin: 0;
+}
+
+</style>
+<body>
+  <div id="container">
+    <canvas id="canvas" style="z-index: -1; position: absolute;">
+
+    </canvas>
+    <img src="button.png" alt="" id="img">
+    <!-- <button id="controls" onclick="hello()" >
+      Hello
+    </button> -->
+  </div>
+  
+</body>
+<script>
+  var img=document.getElementById("img");
+  img.addEventListener("click",hello);
+  var index=0;
+  const arr=["Nagpur","Nagpur","Delhi","Mumbai"];
+  var a="no";
+  function hello(){
+    
+    const canvas=document.getElementById("canvas");
+  const ctx=canvas.getContext('2d');
+  canvas.width=window.innerWidth;
+  canvas.height=window.innerHeight;
+  var img=new Image();
+  img.src="sih_map.png";
+  ctx.font = "30px Arial";
+
+  img.onload=()=>{
+    ctx.drawImage(img,0,0);
+    ctx.fillText(arr[index], 180, 55);
+  }
+  if(index<=2){
+      index++;
+    }
+  }
+  const canvas=document.getElementById("canvas");
+  const ctx=canvas.getContext('2d');
+  canvas.width=window.innerWidth;
+  canvas.height=window.innerHeight;
+  var img=new Image();
+  img.src="sih_map.png";
+  ctx.font = "30px Arial";
+
+  img.onload=()=>{
+    ctx.drawImage(img,0,0,canvas.width,canvas.height);
+    ctx.fillText(a, 180, 55);
+  }
+</script>
+</html>
